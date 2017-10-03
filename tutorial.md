@@ -106,7 +106,7 @@ ls
     ##     }
     ##     else all.names
     ## }
-    ## <bytecode: 0x5575339cde58>
+    ## <bytecode: 0x555abb390e58>
     ## <environment: namespace:base>
 
 Getting some help
@@ -836,7 +836,7 @@ str(iris2)
 ```
 
     ## 'data.frame':    150 obs. of  6 variables:
-    ##  $ my_column   : num  76770 22879 34590 17133 55273 ...
+    ##  $ my_column   : num  26508 81939 14330 78677 59987 ...
     ##  $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
     ##  $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
     ##  $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
@@ -862,8 +862,8 @@ tail(iris3, n=2)
 ```
 
     ##                   ID     Sepal.Length      Sepal.Width Petal.Length
-    ## 150            58811              5.9                3          5.1
-    ## 151 50678.1533333333 5.84333333333333 3.05733333333333        3.758
+    ## 150            74092              5.9                3          5.1
+    ## 151 52846.9933333333 5.84333333333333 3.05733333333333        3.758
     ##          Petal.Width   Species
     ## 150              1.8 virginica
     ## 151 1.19933333333333    setosa
@@ -875,7 +875,7 @@ str(iris3)
 ```
 
     ## 'data.frame':    151 obs. of  6 variables:
-    ##  $ ID          : chr  "76770" "22879" "34590" "17133" ...
+    ##  $ ID          : chr  "26508" "81939" "14330" "78677" ...
     ##  $ Sepal.Length: chr  "5.1" "4.9" "4.7" "4.6" ...
     ##  $ Sepal.Width : chr  "3.5" "3" "3.2" "3.1" ...
     ##  $ Petal.Length: chr  "1.4" "1.4" "1.3" "1.5" ...
@@ -902,14 +902,14 @@ mode(av6)
 av1
 ```
 
-    ## [1] 50678.15
+    ## [1] 52846.99
 
 ``` r
 c(av1,av2,av3,av4,av5,av6) -> last_row
 last_row
 ```
 
-    ## [1] "50678.1533333333" "5.84333333333333" "3.05733333333333"
+    ## [1] "52846.9933333333" "5.84333333333333" "3.05733333333333"
     ## [4] "3.758"            "1.19933333333333" "setosa"
 
 ``` r
@@ -1461,15 +1461,9 @@ Even fancier three-dimensional pie charts can be built using the `plotrix` addit
 ``` r
 if (!require("plotrix", quietly=T)) {
    # download and install the package only if not yet installed on your system (will be done only once)
-  install.packages("plotrix", repos="http://cran.mirror.ac.za/", quiet=TRUE)
+    install.packages("plotrix", repos="http://cran.mirror.ac.za/", quiet=TRUE)
   library(plotrix) # making the functions from the package plotrix readily available for use in the rest of our session
 }
-```
-
-    ## Warning in library(package, lib.loc = lib.loc, character.only = TRUE,
-    ## logical.return = TRUE, : there is no package called 'plotrix'
-
-``` r
 pie3D(educ_vec, explode=0.1, labels=c("0-11yrs", "high school", "college", "university graduate"))
 ```
 
@@ -1607,7 +1601,7 @@ shapiro.test(normvec)
     ##  Shapiro-Wilk normality test
     ## 
     ## data:  normvec
-    ## W = 0.98954, p-value = 0.3278
+    ## W = 0.99262, p-value = 0.6346
 
 Of course, this is just an example, and as you will generate your own `normvec` vector, you will get a different value for the p-value out of the Shapiro-Wilk test. Nevertheless, you should definitely get a p-value that is higher than 0.05, thus giving credit to the null hypothesis that the data `normvec` is normally distributed (and with good reason!).
 
